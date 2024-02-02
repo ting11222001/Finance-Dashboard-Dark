@@ -7,14 +7,14 @@ loadType(mongoose);
 const daySchema = new Schema({
   date: String,
   revenue: {
-    type: mongoose.Types.Currency,
+    type: Number,
     currency: "USD",    // can be customised here
-    get: (value) => value / 100
+    get: (v) => v / 100
   },
   expenses: {
-    type: mongoose.Types.Currency,
+    type: Number,
     currency: "USD",    // can be customised here
-    get: (value) => value / 100
+    get: (v) => v / 100
   },
 },
   { toJson: { getters: true } }
@@ -23,24 +23,24 @@ const daySchema = new Schema({
 const monthSchema = new Schema({
   month: String,
   revenue: {
-    type: mongoose.Types.Currency,
+    type: Number,
     currency: "USD",    // can be customised here
-    get: (value) => value / 100
+    get: (v) => v / 100
   },
   expenses: {
-    type: mongoose.Types.Currency,
+    type: Number,
     currency: "USD",    // can be customised here
-    get: (value) => value / 100
+    get: (v) => v / 100
   },
   operationalExpenses: {
-    type: mongoose.Types.Currency,
+    type: Number,
     currency: "USD",    // can be customised here
-    get: (value) => value / 100
+    get: (v) => v / 100
   },
   nonOperationalExpenses: {
-    type: mongoose.Types.Currency,
+    type: Number,
     currency: "USD",    // can be customised here
-    get: (value) => value / 100
+    get: (v) => v / 100
   },
 },
   { toJson: { getters: true } }
@@ -49,26 +49,26 @@ const monthSchema = new Schema({
 const KPISchema = new Schema(
   {
     totalProfit: {
-      type: mongoose.Types.Currency,
+      type: Number,
       currency: "USD",    // can be customised here
-      get: (value) => value / 100
+      get: (v) => v / 100
     },
     totalRevenue: {
-      type: mongoose.Types.Currency,
+      type: Number,
       currency: "USD",    // can be customised here
-      get: (value) => value / 100
+      get: (v) => v / 100
     },
     totalExpenses: {
-      type: mongoose.Types.Currency,
+      type: Number,
       currency: "USD",    // can be customised here
-      get: (value) => value / 100
+      get: (v) => v / 100
     },
     expensesByCategory: {
       type: Map,
       of: {
-        type: mongoose.Types.Currency,
+        type: Number,
         currency: "USD",    // can be customised here
-        get: (value) => value / 100
+        get: (v) => v / 100
       }
     },
     monthlyData: [monthSchema],
