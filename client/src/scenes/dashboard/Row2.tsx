@@ -120,14 +120,17 @@ const Row2 = () => {
         <FlexBetween
           mt="0.25rem"
           gap="1.5rem"
-          pr="1rem"
+          pr="5%"
+          pl="5%"
+          width="100%"
+          height="75%"
         >
           <PieChart
             width={110}
             height={100}
             margin={{
               top: 0,
-              right: -10,
+              right: 10,
               left: 10,
               bottom: 0,
             }}
@@ -146,7 +149,6 @@ const Row2 = () => {
             </Pie>
           </PieChart>
           <Box
-            ml="-0.7rem"
             flexBasis="40%"
             textAlign="center"
           >
@@ -166,7 +168,6 @@ const Row2 = () => {
             </Typography>
           </Box>
           <Box
-            flexBasis="40%"
           >
             <Typography
               variant="h5">
