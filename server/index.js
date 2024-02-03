@@ -6,8 +6,10 @@ import dotenv from "dotenv"
 import helmet from "helmet"
 import morgan from "morgan"
 import kpiRoutes from "./routes/kpi.js"
+import productRoutes from "./routes/product.js"
 import KPI from "./models/KPI.js"
-import { kpis } from "./data/data.js"
+import Product from "./models/Product.js"
+import { kpis, products } from "./data/data.js"
 
 // Configurations
 dotenv.config()
@@ -22,6 +24,7 @@ app.use(cors())
 
 // Routes
 app.use("/kpi", kpiRoutes)
+app.use("/product", productRoutes)
 
 // mongoose setup
 const PORT = process.env.PORT || 9000;
@@ -31,7 +34,8 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     // Add seed data one time only or as needed
-    // await mongoose.connection.dropDatabase(); // don't do this if in production
-    // KPI.insertMany(kpis); // seed the database with our existing data
+    await mongoose.connection.dropDatabase(); // don't do this if in production
+    KPI.insertMany(kpis); // seed the database with our existing data
+    Product.insertMany(products);
   })
   .catch((error) => console.log(`${error} did not connect`))
