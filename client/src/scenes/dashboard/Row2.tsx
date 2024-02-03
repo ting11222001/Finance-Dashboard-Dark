@@ -3,7 +3,7 @@ import DashboardBox from '@/components/DashboardBox'
 import { useGetKpisQuery, useGetProductsQuery } from '@/state/api'
 import { useMemo } from 'react';
 import { Box, Typography, useTheme } from '@mui/material';
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from 'recharts';
+import { CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from 'recharts';
 import FlexBetween from '@/components/FlexBetween';
 
 // pie data is hard-coded mock data
