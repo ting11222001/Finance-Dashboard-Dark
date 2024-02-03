@@ -204,7 +204,7 @@ const Row3 = () => {
             width="40%"
           ></Box>
         </Box>
-        <Typography margin="0 1rem" variant="h6">
+        <Typography margin="1rem" variant="h6">
           XYZ Corporation concluded the fiscal year 2023 with robust financial performance, showcasing resilience and strategic adaptability in a dynamic market environment. The following summary highlights key financial metrics, operational achievements, and future outlook.
         </Typography>
       </DashboardBox>
