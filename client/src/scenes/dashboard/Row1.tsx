@@ -17,8 +17,8 @@ const Row1 = () => {
       data[0].monthlyData.map(({ month, revenue, expenses }) => (
         {
           name: month.substring(0, 3),
-          revenue: revenue.toFixed(2),
-          expenses: expenses.toFixed(2),
+          revenue: revenue,
+          expenses: expenses,
         })
       )
     )
@@ -32,7 +32,7 @@ const Row1 = () => {
       data[0].monthlyData.map(({ month, revenue, expenses }) => (
         {
           name: month.substring(0, 3),
-          revenue: revenue.toFixed(2),
+          revenue: revenue,
           profit: (revenue - expenses).toFixed(2),
         })
       )
@@ -46,7 +46,7 @@ const Row1 = () => {
       data[0].monthlyData.map(({ month, revenue }) => (
         {
           name: month.substring(0, 3),
-          revenue: revenue.toFixed(2),
+          revenue: revenue,
         }
       ))
     )
