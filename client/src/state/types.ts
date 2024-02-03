@@ -1,3 +1,4 @@
+// KPI
 export interface ExpensesByCategory {
   salaries: number;
   services: number;
@@ -33,4 +34,15 @@ export interface GetKpisResponse {
   updatedAt: string;
   createdAt: string;
 
+}
+
+// Product
+export interface GetProductsResponse {
+  _id: string;
+  __v: number;
+  price: number;
+  expense: number;
+  transactions: Array<string>; // ObjectIDs are strings.
+  createdAt: string;
+  updatedAt: string;
 }
