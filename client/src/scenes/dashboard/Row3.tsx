@@ -3,10 +3,10 @@ import DashboardBox from '@/components/DashboardBox'
 import FlexBetween from '@/components/FlexBetween';
 import { useGetTransactionsQuery, useGetProductsQuery, useGetKpisQuery } from '@/state/api'
 import { Box, Typography, useTheme } from '@mui/material';
-import { GridCellParams, GridRowIdGetter } from '@mui/x-data-grid';
+import { GridCellParams } from '@mui/x-data-grid';
 import { DataGrid } from '@mui/x-data-grid/DataGrid';
 import { useMemo } from 'react';
-import { CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from 'recharts';
+import { Cell, Pie, PieChart } from 'recharts';
 
 const Row3 = () => {
   const { palette } = useTheme();
