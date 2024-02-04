@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fauna+One&family=Inter:wght@400;600;700&display=swap');
 
-html, 
+html,
 body,
 #root,
 .app {
@@ -9,3 +9,20 @@ body,
   font-family: "Inter", sans-serif;
   background-color: #1f2026;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #242427;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #48494e;
+}
+
+::-webkit-scrollbar {
+  background: #2a2b2f;
+}
+
