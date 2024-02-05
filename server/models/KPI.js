@@ -1,21 +1,15 @@
 import mongoose from "mongoose";
-import { loadType } from "mongoose-currency";
 
 const Schema = mongoose.Schema;
-loadType(mongoose);
 
 const daySchema = new Schema(
   {
     date: String,
     revenue: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
     expenses: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
   },
   { toJSON: { getters: true } }
@@ -25,24 +19,16 @@ const monthSchema = new Schema(
   {
     month: String,
     revenue: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
     expenses: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
     operationalExpenses: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
     nonOperationalExpenses: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
   },
   { toJSON: { getters: true } }
@@ -51,26 +37,18 @@ const monthSchema = new Schema(
 const KPISchema = new Schema(
   {
     totalProfit: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
     totalRevenue: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
     totalExpenses: {
-      type: mongoose.Types.Currency,
-      currency: "USD",
-      get: v => (v / 100).toFixed(2),
+      type: Number,
     },
     expensesByCategory: {
       type: Map,
       of: {
-        type: mongoose.Types.Currency,
-        currency: "USD",
-        get: v => (v / 100).toFixed(2),
+        type: Number,
       },
     },
     monthlyData: [monthSchema],
