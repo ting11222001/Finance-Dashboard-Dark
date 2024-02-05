@@ -21,7 +21,7 @@ const Predictions = () => {
 
     const formatted: Array<DataPoint> = monthData.map(
       ({ revenue }, i: number) => {
-        return [i, parseFloat(revenue)];
+        return [i, Number(revenue)];
       }
     );
     console.log("🚀 ~ formattedData ~ formatted:", formatted)
