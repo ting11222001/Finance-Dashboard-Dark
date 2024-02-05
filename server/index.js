@@ -37,9 +37,9 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     // Add seed data one time only or as needed
-    await mongoose.connection.dropDatabase(); // don't do this if in production
-    KPI.insertMany(kpis); // seed the database with our existing data
-    Product.insertMany(products);
-    Transaction.insertMany(transactions);
+    // await mongoose.connection.dropDatabase(); // don't do this if in production
+    // KPI.insertMany(kpis); // seed the database with our existing data
+    // Product.insertMany(products);
+    // Transaction.insertMany(transactions);
   })
   .catch((error) => console.log(`${error} did not connect`))
